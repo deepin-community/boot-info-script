@@ -1,0 +1,23 @@
+Source: boot-info-script
+Section: admin
+Priority: optional
+Maintainer: Chris Hofstaedtler <zeha@debian.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Homepage: https://github.com/arvidjaar/bootinfoscript
+Vcs-Git: https://salsa.debian.org/debian/boot-info-script.git
+Vcs-Browser: https://salsa.debian.org/debian/boot-info-script
+
+Package: boot-info-script
+Architecture: all
+Depends: bsdextrautils,
+         e2fsprogs,
+         fdisk,
+         gawk,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: inspect boot environment
+ boot-info-script generates a report of your boot environment. This report
+ can easily be read or sent to someone else in case you can not fix the
+ problem yourself.
